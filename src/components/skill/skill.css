@@ -1,0 +1,60 @@
+.skill {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: auto;
+  margin: 0 !important;
+
+  /* -------------------------------------------------------------------------- */
+  /*                   background-image: url("./img/07.png");                   */
+  /* -------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------- */
+  /*                        background-repeat: no-repeat;                       */
+  /* -------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------- */
+  /*                          background-position: top;                         */
+  /* -------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------- */
+  /*                        background-size: 900px 900px;                       */
+  /* -------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------- */
+  /*                  background-attachment: fixed !important;                  */
+  /* -------------------------------------------------------------------------- */
+}
+.extra-size {
+  padding: 5px;
+  width: auto;
+  height: auto;
+  border-radius: 30px !important;
+  font-weight: 900;
+}
+.title {
+  text-decoration: underline;
+  text-decoration-color: rgb(106, 0, 255);
+}
+.skills-card-container {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(106, 0, 255);
+  border-radius: 10px;
+  background-color: transparent !important;
+  padding: 15px;
+}
+/*
+.background-cloud-card {
+  background-image: linear-gradient(
+    to right bottom,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    #ebe012
+  );
+  border-radius: 10px;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  filter: blur(10px);
+}
+*/

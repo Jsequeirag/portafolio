@@ -1,0 +1,23 @@
+.description {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to left top,
+    #042d6b,
+    #02285c,
+    #02224e,
+    #041d40,
+    #051732,
+    #0a1631,
+    #0e162f,
+    #11152e,
+    #1d1937,
+    #2a1b3e,
+    #391e44,
+    #481f49
+  );
+  background-attachment: fixed !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

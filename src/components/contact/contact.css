@@ -1,0 +1,80 @@
+.contact {
+  height: auto;
+  padding: 20px;
+  font-family: "VT323", monospace !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./wave.svg"),
+    linear-gradient(
+      to left bottom,
+      #44a1ff,
+      #5297fe,
+      #628cfb,
+      #7480f6,
+      #8572ee,
+      #777bf5,
+      #6883fa,
+      #578bff,
+      #00a5ff,
+      #00bcff,
+      #00d1ff,
+      #12e3ff
+    );
+  /* ------------------ background-image: url("./wave.svg"); ------------------ */
+}
+.contact .title {
+  text-decoration: underline;
+  text-decoration-color: rgb(106, 0, 255);
+  font-size: 56px;
+  color: white;
+  text-align: center;
+}
+.form-container {
+  padding: 20px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  border: 2px black solid;
+  box-shadow: -11px 11px 0px 1px black;
+  -webkit-box-shadow: -11px 11px 0px 1px black;
+  -moz-box-shadow: -11px 11px 0px 1px black;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(34, 34, 34);
+}
+.paper-plane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact img {
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes example {
+  from {
+    transform: translate(11px, -11px) rotate(0deg);
+  }
+  to {
+    transform: translate(0px) rotate(0deg);
+  }
+}
+
+form button {
+  padding: 5px 15px;
+  margin-top: 20px;
+  font-weight: bold;
+  border: 2px black solid;
+  background-color: transparent;
+  transition: font-weight 0.1s, transform 0.1s, background-color 0.1s;
+}
+form button:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s, background-color 0.1s;
+  background-color: rgb(106, 0, 255);
+}

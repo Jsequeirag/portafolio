@@ -1,0 +1,43 @@
+.headerNav {
+  transition: box-shadow 1s, background-color 1s, backdrop-filter 1s;
+  color: white !important;
+}
+.headerNav mark {
+  background-color: black;
+}
+.headerLink {
+  color: white !important;
+  display: inline-block;
+  position: relative;
+  transition: none !important;
+  margin-left: 12px !important;
+  margin-right: 12px !important;
+  font-weight: 500;
+}
+.headerLink:hover {
+  transform: scale(1.1);
+}
+.headerLink::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgb(106, 0, 255);
+  transition: width 0.25s ease-out;
+}
+.headerLink:hover::before {
+  width: 100%;
+}
+.contactLink {
+  color: white !important;
+  font-weight: 500;
+  margin-left: 10px !important;
+  border: 1px rgb(106, 0, 255) solid;
+  border-radius: 10px;
+}
+.contactLink:hover {
+  color: black !important;
+  background-color: rgb(106, 0, 255);
+}

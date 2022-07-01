@@ -1,0 +1,60 @@
+/* -------------------------------------------------------------------------- */
+/*                                    main                                    */
+/* -------------------------------------------------------------------------- */
+.projects {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  /*background-image: linear-gradient(
+    to left bottom,
+    #4c177a,
+    #362071,
+    #222365,
+    #132357,
+    #0c2147
+  );*/
+
+  height: auto;
+}
+/* -------------------------------------------------------------------------- */
+/*                                    title                                   */
+/* -------------------------------------------------------------------------- */
+.projects .title {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: rgb(106, 0, 255);
+  text-align: center;
+}
+/* -------------------------------------------------------------------------- */
+/*                                    card                                    */
+/* -------------------------------------------------------------------------- */
+
+.card {
+  box-shadow: -3px 3px 3px 0px;
+  transition: box-shadow 0.3s top;
+}
+.btn-moving {
+  font-weight: 500;
+  border-radius: 14px;
+  border: 2px solid;
+  background-color: transparent;
+  transition: font-weight 0.1s, transform 0.1s, background-color 0.5s;
+  padding: 5px 10px;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+.btn-moving:hover {
+  font-weight: 900;
+  border-radius: 14px;
+  border: 2px solid;
+  transform: scale(1.05);
+  transition: font-weight 0.1s, transform 0.1s, background-color 0.5s;
+  background-image: linear-gradient(
+    to right top,
+    #884dff,
+    #009aff,
+    #00c7ff,
+    #00e7eb,
+    #33ffad
+  );
+}

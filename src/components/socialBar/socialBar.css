@@ -1,0 +1,28 @@
+.icon-bar {
+  border: 2px solid black;
+  background-color: rgb(106, 0, 255);
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  position: fixed;
+  top: 50%;
+  right: 0%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 25px;
+}
+.icon-bar .linkedin {
+  border-top-left-radius: 12px;
+}
+.icon-bar a:hover {
+  background-color: #000;
+}
