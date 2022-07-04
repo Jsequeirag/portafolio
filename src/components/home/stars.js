@@ -1,4 +1,4 @@
-function Canvas() {
+const stars = () => {
   const canvas = document.getElementById("stars");
   const ctx = canvas.getContext("2d");
   var screen, starArr;
@@ -58,10 +58,10 @@ function Canvas() {
     });
     window.requestAnimationFrame(update);
   }
-}
+};
 
 /* -------------------------------------------------------------------------- */
 /*               esta función se activa con la acción del scroll              */
 /* -------------------------------------------------------------------------- */
 
-export default Canvas;
+export default stars;

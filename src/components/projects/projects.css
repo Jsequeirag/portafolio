@@ -2,9 +2,9 @@
 /*                                    main                                    */
 /* -------------------------------------------------------------------------- */
 .projects {
+  font-size: 20px !important;
+  font-family: "Space Mono", monospace !important;
   margin: 0 !important;
-  padding: 0 !important;
-
   /*background-image: linear-gradient(
     to left bottom,
     #4c177a,
@@ -13,7 +13,6 @@
     #132357,
     #0c2147
   );*/
-
   height: auto;
 }
 /* -------------------------------------------------------------------------- */
@@ -28,10 +27,16 @@
 /* -------------------------------------------------------------------------- */
 /*                                    card                                    */
 /* -------------------------------------------------------------------------- */
-
+.projects-container {
+  padding: 30px 0 30px 0;
+}
 .card {
   box-shadow: -3px 3px 3px 0px;
   transition: box-shadow 0.3s top;
+  margin: 0px 20px 20px 20px;
+}
+.projects .card-title {
+  text-align: center;
 }
 .btn-moving {
   font-weight: 500;
@@ -49,12 +54,5 @@
   border: 2px solid;
   transform: scale(1.05);
   transition: font-weight 0.1s, transform 0.1s, background-color 0.5s;
-  background-image: linear-gradient(
-    to right top,
-    #884dff,
-    #009aff,
-    #00c7ff,
-    #00e7eb,
-    #33ffad
-  );
+  background-color: rgb(0, 255, 191);
 }

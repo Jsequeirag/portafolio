@@ -1,16 +1,38 @@
 import React from "react";
 import "./socialBar.css";
 import Ztext from "react-ztext";
+import { motion } from "framer-motion/dist/framer-motion";
 export default function SocialBar() {
+  /* ------------------------------ framer motion ----------------------------- */
+  const fadeInDown = {
+    initial: {
+      x: 50,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
-    <div class="icon-bar">
-      <a href="/ww" class="linkedin">
-        <i class="fa fa-linkedin"></i>
+    <motion.div
+      variants={fadeInDown}
+      initial="initial"
+      animate="animate"
+      className="icon-bar "
+    >
+      <a href="/ww" className="linkedin">
+        <i className="fa fa-linkedin"></i>
       </a>
-      <a href="https://github.com/Jsequeirag/" class="github">
-        <i class="fa fa-github"></i>
+      <a href="https://github.com/Jsequeirag/" className="github">
+        <i className="fa fa-github"></i>
       </a>
-      <a href="/" class="github">
+      <a href="/" className="robot">
         <Ztext
           depth="1rem"
           direction="both"
@@ -26,6 +48,6 @@ export default function SocialBar() {
           </span>
         </Ztext>
       </a>
-    </div>
+    </motion.div>
   );
 }

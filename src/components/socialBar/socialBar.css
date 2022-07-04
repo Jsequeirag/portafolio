@@ -1,15 +1,15 @@
 .icon-bar {
-  border: 2px solid black;
-  background-color: rgb(106, 0, 255);
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   position: fixed;
-  top: 50%;
-  right: 0%;
+  top: 40% !important;
+  right: 0% !important;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 1;
+  box-shadow: -2px 0px 20px 1px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(20px) !important;
 }
 
 .icon-bar a {
@@ -25,4 +25,7 @@
 }
 .icon-bar a:hover {
   background-color: #000;
+}
+.icon-bar .robot {
+  pointer-events: none;
 }

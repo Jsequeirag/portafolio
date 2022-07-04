@@ -18,6 +18,8 @@
     #481f49
   );
   border-bottom: 1px solid black;
+  font-size: 20px !important;
+  font-family: "Space Mono", monospace !important;
 }
 .btn-hover {
   backdrop-filter: blur(2px) !important;
@@ -36,13 +38,16 @@
   transition: transform 0.3s, background-color 0.3s;
   font-weight: 500;
 }
-
+.image-container {
+  display: flex;
+  justify-content: right;
+}
 .image {
   height: auto;
   width: 50%;
-  background-color: transparent;
-  backdrop-filter: blur(2.5px) !important;
-  z-index: 1 !important;
+  position: relative;
+  backdrop-filter: blur(5px) !important;
+  z-index: 0 !important;
   border-radius: 15px;
   box-shadow: -3px 4px 1px 1px black;
   border: 2px #000000 solid;
@@ -51,4 +56,49 @@
 .info-container {
   z-index: 1 !important;
   color: whitesmoke;
+}
+.my-info {
+  text-align: left;
+}
+.myname {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.myocupation {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#typeit-name {
+  font-size: 50px !important;
+}
+#typeit-ocupation {
+  font-size: 22px !important;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: 2px underline;
+  text-decoration-color: rgb(0, 228, 171);
+}
+@media screen and (max-width: 991px) {
+  .image-container {
+    justify-content: center;
+  }
+  .info-container {
+    margin-top: 40px !important;
+  }
+  #typeit-name {
+    font-size: 40px !important;
+  }
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #stars {
+    height: auto !important;
+  }
+  canvas {
+    height: auto !important;
+  }
 }

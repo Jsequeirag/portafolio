@@ -1,7 +1,0 @@
-#tsparticles {
-  position: absolute;
-  filter: blur(0.3px) !important;
-}
-canvas {
-  min-height: 100vh;
-}

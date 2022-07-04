@@ -1,8 +1,9 @@
 .skill {
+  font-size: 20px !important;
+  font-family: "Space Mono", monospace !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding-top: 40px !important;
   min-height: auto;
-  margin: 0 !important;
 
   /* -------------------------------------------------------------------------- */
   /*                   background-image: url("./img/07.png");                   */
@@ -20,13 +21,28 @@
   /*                  background-attachment: fixed !important;                  */
   /* -------------------------------------------------------------------------- */
 }
-.extra-size {
-  padding: 5px;
-  width: auto;
-  height: auto;
-  border-radius: 30px !important;
-  font-weight: 900;
+.skill .title {
+  text-align: center;
+  color: white;
 }
+.skills-container {
+  padding: 30px 0 30px 0;
+}
+/* ---------------------------------- card ---------------------------------- */
+.skill .card-title {
+  color: white;
+  text-align: center;
+}
+.skill p {
+  color: white;
+  margin: 0px !important;
+}
+.skills-card-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
 .title {
   text-decoration: underline;
   text-decoration-color: rgb(106, 0, 255);
@@ -37,6 +53,9 @@
   border-radius: 10px;
   background-color: transparent !important;
   padding: 15px;
+  box-shadow: -11px 11px 0px 1px black;
+  -webkit-box-shadow: -11px 11px 0px 1px black;
+  -moz-box-shadow: -11px 11px 0px 1px black;
 }
 /*
 .background-cloud-card {

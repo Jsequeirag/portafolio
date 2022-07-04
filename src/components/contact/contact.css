@@ -1,33 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 .contact {
   height: auto;
   padding: 20px;
   font-family: "VT323", monospace !important;
+
   background-attachment: fixed !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("./wave.svg"),
-    linear-gradient(
-      to left bottom,
-      #44a1ff,
-      #5297fe,
-      #628cfb,
-      #7480f6,
-      #8572ee,
-      #777bf5,
-      #6883fa,
-      #578bff,
-      #00a5ff,
-      #00bcff,
-      #00d1ff,
-      #12e3ff
-    );
-  /* ------------------ background-image: url("./wave.svg"); ------------------ */
+  background-image: linear-gradient(
+    to left bottom,
+    #44a1ff,
+    #5297fe,
+    #628cfb,
+    #7480f6,
+    #8572ee,
+    #777bf5,
+    #6883fa,
+    #578bff,
+    #00a5ff,
+    #00bcff,
+    #00d1ff,
+    #12e3ff
+  );
 }
 .contact .title {
   text-decoration: underline;
   text-decoration-color: rgb(106, 0, 255);
-  font-size: 56px;
+  font-size: 60px !important;
   color: white;
   text-align: center;
 }
@@ -39,7 +39,7 @@
   box-shadow: -11px 11px 0px 1px black;
   -webkit-box-shadow: -11px 11px 0px 1px black;
   -moz-box-shadow: -11px 11px 0px 1px black;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   color: rgb(34, 34, 34);
 }
@@ -58,7 +58,7 @@
 }
 @keyframes example {
   from {
-    transform: translate(11px, -11px) rotate(0deg);
+    transform: translate(13px, -11px) rotate(0deg);
   }
   to {
     transform: translate(0px) rotate(0deg);

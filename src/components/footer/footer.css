@@ -1,6 +1,11 @@
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px !important;
+  font-family: "Space Mono", monospace !important;
   text-align: center;
   color: white;
   background-color: black;
-  padding: 20px;
+  padding: 18px;
 }

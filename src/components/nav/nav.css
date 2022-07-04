@@ -1,0 +1,83 @@
+.Navigator {
+  transition: box-shadow 1s, background-color 1s, backdrop-filter 1s;
+  color: white !important;
+  box-shadow: 1px -5px 22px 0px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(20px) !important;
+  font-size: 20px !important;
+  font-family: "Space Mono", monospace !important;
+}
+.Navigator mark {
+  background-color: black;
+}
+.navLink {
+  color: white !important;
+  display: inline-block;
+  position: relative;
+  transition: none !important;
+  margin-left: 12px !important;
+  margin-right: 12px !important;
+  font-weight: 500;
+}
+.navLink:hover {
+  transform: scale(1.1);
+}
+.navLink::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgb(106, 0, 255);
+  transition: width 0.25s ease-out;
+}
+.navLink:hover::before {
+  width: 100%;
+}
+.contactLink {
+  color: white !important;
+  font-weight: 500;
+  margin-left: 10px !important;
+  border: 1px rgb(106, 0, 255) solid;
+  border-radius: 10px;
+}
+.contactLink:hover {
+  color: black !important;
+  background-color: rgb(106, 0, 255);
+}
+
+@media screen and (max-width: 991px) {
+  .navLink {
+    text-align: center;
+  }
+  .navLink:hover {
+    transform: none;
+    color: black !important;
+    background-color: rgb(106, 0, 255) !important;
+  }
+  .navLink:active {
+    background-color: rgb(106, 0, 255) !important;
+  }
+
+  .navLink::before {
+    transition: none;
+    position: relative;
+  }
+  .contactLink {
+    border: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .contactLink:active {
+    background-color: rgb(106, 0, 255) !important;
+  }
+  .Navigator {
+    box-shadow: 1px -5px 22px 0px rgba(0, 0, 0, 0.75) !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  .navbar-light .navbar-toggler {
+    color: transparent !important;
+    border-color: transparent !important;
+  }
+}
