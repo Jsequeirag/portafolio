@@ -43,6 +43,10 @@
   font-weight: bold;
   color: rgb(34, 34, 34);
 }
+.form-container input,
+textarea {
+  font-size: 30px !important;
+}
 .paper-plane {
   display: flex;
   justify-content: center;
