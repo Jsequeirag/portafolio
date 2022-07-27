@@ -43,8 +43,10 @@
   justify-content: right;
 }
 .image {
+  padding: 15px;
   height: auto;
-  width: 50%;
+  /* ------------------------------- width: 50%; ------------------------------ */
+  width: 275px;
   position: relative;
   backdrop-filter: blur(5px) !important;
   z-index: 0 !important;
@@ -73,7 +75,7 @@
   font-size: 50px !important;
 }
 #typeit-ocupation {
-  font-size: 22px !important;
+  font-size: 30px !important;
   font-weight: bold;
   font-style: italic;
   text-decoration: 2px underline;

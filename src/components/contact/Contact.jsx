@@ -5,22 +5,43 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const submit = async (data) => {
-    data.preventDefault();
-    alert(process.env.REACT_APP_NODEMAIL);
-    console.log(process.env.REACT_APP_NODEMAIL);
+  const [sendingEmail, setSendingEMail] = useState(false);
+  const [sendEmail, setSendEmail] = useState(true);
+  const [emailSentConfirmation, setemailSentConfirmation] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const submit = async (e) => {
+    e.preventDefault();
+    e.target.reset();
+    setSendingEMail(true);
+    setSendEmail(false);
     await axios
       .post(process.env.REACT_APP_NODEMAIL, {
         companyemail: email,
         text: message,
       })
       .then((res) => {
-        alert(res.data.message);
+        if (res.data.emailStatus) {
+          setSendingEMail(false);
+          setemailSentConfirmation(true);
+          setTimeout(() => {
+            setemailSentConfirmation(false);
+          }, 1500);
+          setTimeout(() => {
+            setSendEmail(true);
+          }, 1500);
+          setErrorMessage("");
+        } else {
+          setErrorMessage(res.data.message);
+          setSendingEMail(false);
+          setSendEmail(true);
+        }
       })
       .catch((e) => {
         alert(e);
       });
   };
+
   return (
     <div className="contact" id="contact">
       <h1 className="title">Contact me</h1>
@@ -29,18 +50,24 @@ export default function Contact() {
           <img src="./img/paper-plane.png" alt="asd" height={300} width={280} />
         </div>
         <div className="form-container col-lg-6 ">
+          {errorMessage && (
+            <div className="errorSendingEmail text-center">
+              <span>{errorMessage}</span>
+            </div>
+          )}
+
           <form
             className="d-flex justify-content-center flex-column"
             onSubmit={submit}
-            defaul
+            id="form"
           >
-            <div class="">
-              <label for="exampleInputEmail1" class="form-label ">
+            <div className="">
+              <label for="exampleInputEmail1" className="form-label ">
                 Email address
               </label>
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 name="email"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
@@ -50,16 +77,16 @@ export default function Contact() {
                   console.log(e.target.value);
                 }}
               />
-              <div id="emailHelp" class="form-text ">
+              <div id="emailHelp" className="form-text ">
                 We'll never share your email with anyone else.
               </div>
             </div>
-            <div class="">
-              <label for="exampleInputPassword1" class="form-label ">
+            <div className="">
+              <label for="exampleInputPassword1" className="form-label ">
                 Message
               </label>
               <textarea
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlTextarea1"
                 rows="3"
                 name="message"
@@ -70,9 +97,21 @@ export default function Contact() {
                 }}
               ></textarea>
             </div>
-            <div className="text-center">
-              <button>Send</button>
-            </div>
+            {sendingEmail && (
+              <div className="sendingEmailState text-center">
+                <span>Sending...⌛</span>
+              </div>
+            )}
+            {sendEmail && (
+              <div className="text-center">
+                <button>Send</button>
+              </div>
+            )}
+            {emailSentConfirmation && (
+              <div className="sendingEmailState text-center">
+                <span>Email sent ✅</span>
+              </div>
+            )}
           </form>
         </div>
         <div className="col-lg-3"></div>

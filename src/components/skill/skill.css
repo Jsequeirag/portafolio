@@ -2,7 +2,7 @@
   font-size: 20px !important;
   font-family: "Space Mono", monospace !important;
   margin: 0 !important;
-  padding-top: 40px !important;
+  padding: 50px 0px 25px 0px !important;
   min-height: auto;
 
   /* -------------------------------------------------------------------------- */
@@ -25,9 +25,7 @@
   text-align: center;
   color: white;
 }
-.skills-container {
-  padding: 30px 0 30px 0;
-}
+
 /* ---------------------------------- card ---------------------------------- */
 .skill .card-title {
   color: white;
@@ -37,10 +35,10 @@
   color: white;
   margin: 0px !important;
 }
+.skills-container {
+}
 .skills-card-container {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 50px 25px 0px 25px;
 }
 
 .title {

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 .contact {
   height: auto;
-  padding: 20px;
+  padding: 50px;
   font-family: "VT323", monospace !important;
 
   background-attachment: fixed !important;
@@ -81,4 +81,20 @@ form button:hover {
   transform: scale(1.05);
   transition: transform 0.1s, background-color 0.1s;
   background-color: rgb(106, 0, 255);
+}
+.sendingEmailState {
+  margin-top: 20px;
+  padding: 5px 15px;
+  background-color: rgb(189, 255, 189);
+  border: 2px transparent solid;
+  border-radius: 15px;
+}
+.errorSendingEmail {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  background-color: rgb(255, 189, 189);
+  border: 2px transparent solid;
+  border-radius: 15px;
+  color: red;
 }

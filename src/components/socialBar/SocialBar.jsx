@@ -29,7 +29,11 @@ export default function SocialBar() {
       <a href="/ww" className="linkedin">
         <i className="fa fa-linkedin"></i>
       </a>
-      <a href="https://github.com/Jsequeirag/" className="github">
+      <a
+        href="https://github.com/Jsequeirag/"
+        target={"_blank"}
+        className="github"
+      >
         <i className="fa fa-github"></i>
       </a>
       <a href="/" className="robot">

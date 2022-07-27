@@ -14,6 +14,8 @@
     #0c2147
   );*/
   height: auto;
+
+  padding: 25px !important;
 }
 /* -------------------------------------------------------------------------- */
 /*                                    title                                   */
@@ -31,9 +33,16 @@
   padding: 30px 0 30px 0;
 }
 .card {
+  height: 475px;
+  width: 100%;
+  max-width: 400;
+  min-width: 300;
   box-shadow: -3px 3px 3px 0px;
   transition: box-shadow 0.3s top;
-  margin: 0px 20px 20px 20px;
+  margin: 25px 25px 25px 25px;
+}
+.card-img {
+  height: 300px;
 }
 .projects .card-title {
   text-align: center;
@@ -45,8 +54,8 @@
   background-color: transparent;
   transition: font-weight 0.1s, transform 0.1s, background-color 0.5s;
   padding: 5px 10px;
-  margin-left: 10px !important;
-  margin-right: 10px !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
 }
 .btn-moving:hover {
   font-weight: 900;

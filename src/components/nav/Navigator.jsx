@@ -39,7 +39,7 @@ export default function Navigator() {
         >
           <Navbar.Brand href="#home" className="p-2">
             <mark className=" text-white ">José</mark>
-            <text className="text-white">Sequeira</text>
+            <span className="text-white">Sequeira</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

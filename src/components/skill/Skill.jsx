@@ -12,7 +12,7 @@ export default function Skill() {
             style={{ minWidth: "300px", width: "300px", height: "300px" }}
           >
             <h2 className="card-title">Backend</h2>
-            <div class="">
+            <div className="">
               <p>-Typescript</p>
               <p>-Mongo</p>
             </div>
@@ -22,7 +22,7 @@ export default function Skill() {
             style={{ minWidth: "300px", width: "300px", height: "300px" }}
           >
             <h2 className="card-title">Frontend</h2>
-            <div class="">
+            <div className="">
               <p>-Typescript</p>
               <p>-Mongo</p>
             </div>
@@ -30,12 +30,10 @@ export default function Skill() {
 
           <div
             className="skills-card-container"
-            text-white
-            m-3
             style={{ minWidth: "300px", width: "300px", height: "300px" }}
           >
             <h2 className="card-title">Cloud</h2>
-            <div class="">
+            <div className="">
               <p>-Typescript</p>
               <p>-Mongo</p>
             </div>

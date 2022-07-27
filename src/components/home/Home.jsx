@@ -37,12 +37,7 @@ export default function Home() {
           initial="initial"
           animate="animate"
         >
-          <img
-            src="./img/05.png"
-            alt="programmer"
-            className="image"
-            style={{ minWidth: "300px" }}
-          />
+          <img src="./img/happy.svg" alt="programmer" className="image" />
         </motion.div>
         <motion.div
           className="info-container col-lg-5 d-flex d-flex flex-column"
