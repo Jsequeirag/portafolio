@@ -13,8 +13,12 @@ export default function Skill() {
           >
             <h2 className="card-title">Backend</h2>
             <div className="">
+              <p>-Nodejs</p>
               <p>-Typescript</p>
+              <p>-Expressjs</p>
               <p>-Mongo</p>
+              <p>-SQL</p>
+              <p>-ORM(Sequelize)</p>
             </div>
           </div>
           <div
@@ -23,8 +27,8 @@ export default function Skill() {
           >
             <h2 className="card-title">Frontend</h2>
             <div className="">
-              <p>-Typescript</p>
-              <p>-Mongo</p>
+              <p>-React</p>
+              <p>-HTML,CSS,Javascript</p>
             </div>
           </div>
 
@@ -32,10 +36,10 @@ export default function Skill() {
             className="skills-card-container"
             style={{ minWidth: "300px", width: "300px", height: "300px" }}
           >
-            <h2 className="card-title">Cloud</h2>
+            <h2 className="card-title">Services</h2>
             <div className="">
-              <p>-Typescript</p>
-              <p>-Mongo</p>
+              <p>-Heroku</p>
+              <p>-Netlify</p>
             </div>
           </div>
         </div>

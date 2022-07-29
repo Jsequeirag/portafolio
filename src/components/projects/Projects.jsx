@@ -33,21 +33,25 @@ export default function Projects() {
               <h4 className="card-title">{project.title}</h4>
               <p className="card-text">{project.description}</p>
               <div className="d-flex justify-content-center">
-                <a
-                  href={project.link}
-                  style={{
-                    textDecoration: "none",
-                  }}
-                >
-                  <button className="btn-moving d-flex align-items-center">
-                    Website
-                    <img
-                      src="/img/website.png"
-                      alt="hi"
-                      style={{ width: "35px", height: "35px" }}
-                    />
-                  </button>
-                </a>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    style={{
+                      textDecoration: "none",
+                    }}
+                    target="_blank"
+                  >
+                    <button className="btn-moving d-flex align-items-center">
+                      Website
+                      <img
+                        src="/img/website.png"
+                        alt="hi"
+                        style={{ width: "35px", height: "35px" }}
+                      />
+                    </button>
+                  </a>
+                )}
+
                 <a
                   href={project.github}
                   style={{
