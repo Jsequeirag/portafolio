@@ -52,7 +52,9 @@ export default function Home() {
             <span id="typeit-ocupation"></span>
           </div>
           <div className="text-center cv-button">
+            <a href="https://drive.google.com/file/d/1Iz5jA1S_JeajdMAd0NVoV2Kp6S2cNg0G/view?usp=sharing" target="_blank" rel="noreferrer">
             <button className="btn-hover mt-1">Download CV</button>
+            </a>
           </div>
         </motion.div>
       </div>
