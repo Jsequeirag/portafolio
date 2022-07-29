@@ -39,7 +39,7 @@ export default function Projects() {
                     style={{
                       textDecoration: "none",
                     }}
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     <button className="btn-moving d-flex align-items-center">
                       Website
@@ -57,6 +57,7 @@ export default function Projects() {
                   style={{
                     textDecoration: "none",
                   }}
+                     target="_blank" rel="noreferrer"
                 >
                   <button className="btn-moving d-flex align-items-center">
                     GitHub
