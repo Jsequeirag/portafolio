@@ -26,7 +26,7 @@ export default function SocialBar() {
       animate="animate"
       className="icon-bar "
     >
-      <a href="/ww" className="linkedin">
+      <a href="/" className="linkedin">
         <i className="fa fa-linkedin"></i>
       </a>
       <a
