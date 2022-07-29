@@ -31,7 +31,7 @@ export default function SocialBar() {
       </a>
       <a
         href="https://github.com/Jsequeirag/"
-        target={"_blank"}
+         target="_blank" rel="noreferrer"
         className="github"
       >
         <i className="fa fa-github"></i>
