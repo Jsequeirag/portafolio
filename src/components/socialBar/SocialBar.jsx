@@ -26,7 +26,7 @@ export default function SocialBar() {
       animate="animate"
       className="icon-bar "
     >
-      <a href="linkedin.com/in/josé-luis-sequeira-góngora-114baa216" className="linkedin">
+      <a href="/linkedin.com/in/josé-luis-sequeira-góngora-114baa216" className="linkedin">
         <i className="fa fa-linkedin"></i>
       </a>
       <a
