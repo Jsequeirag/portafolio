@@ -43,16 +43,16 @@
   justify-content: right;
 }
 .image {
-  padding: 15px;
+ 
   height: auto;
   /* ------------------------------- width: 50%; ------------------------------ */
   width: 275px;
   position: relative;
   backdrop-filter: blur(5px) !important;
   z-index: 0 !important;
-  border-radius: 15px;
-  box-shadow: -3px 4px 1px 1px black;
-  border: 2px #000000 solid;
+  /* ------------------------------- border-radius: 15px;------------------------------ */
+  /* ------------------------------- box-shadow: -3px 4px 1px 1px black;------------------------------ */
+  /* ------------------------------- border: 2px #000000 solid;------------------------------ */
 }
 
 .info-container {
