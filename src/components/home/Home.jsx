@@ -37,7 +37,7 @@ export default function Home() {
           initial="initial"
           animate="animate"
         >
-          <img src="./img/happy.svg" alt="programmer" className="image" />
+          <img src="./img/avatar.png" alt="programmer" className="image" />
         </motion.div>
         <motion.div
           className="info-container col-lg-5 d-flex d-flex flex-column"
