@@ -39,7 +39,8 @@ export default function Projects() {
                     style={{
                       textDecoration: "none",
                     }}
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <button className="btn-moving d-flex align-items-center">
                       Website
@@ -52,22 +53,43 @@ export default function Projects() {
                   </a>
                 )}
 
-                <a
-                  href={project.github}
-                  style={{
-                    textDecoration: "none",
-                  }}
-                     target="_blank" rel="noreferrer"
-                >
-                  <button className="btn-moving d-flex align-items-center">
-                    GitHub
-                    <img
-                      src="/img/github.png"
-                      alt="hi"
-                      style={{ width: "35px", height: "35px" }}
-                    />
-                  </button>
-                </a>
+                {project?.replit ? (
+                  <a
+                    href={project.replit}
+                    style={{
+                      textDecoration: "none",
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="btn-moving d-flex align-items-center">
+                      Replit
+                      <img
+                        src="/img/replit.png"
+                        alt="hi"
+                        style={{ width: "35px", height: "35px" }}
+                      />
+                    </button>{" "}
+                  </a>
+                ) : (
+                  <a
+                    href={project.github}
+                    style={{
+                      textDecoration: "none",
+                    }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="btn-moving d-flex align-items-center">
+                      GitHub
+                      <img
+                        src="/img/github.png"
+                        alt="hi"
+                        style={{ width: "35px", height: "35px" }}
+                      />
+                    </button>{" "}
+                  </a>
+                )}
               </div>
             </div>
           </div>

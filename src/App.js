@@ -6,7 +6,7 @@ import Footer from "./components/footer/Footer";
 import SocialBar from "./components/socialBar/SocialBar";
 function App() {
   return (
-    <div className="app">
+    <div className="app" data-spy="scroll" data-target="#nav" data-offset="0">
       <Navigator />
       <SocialBar />
       <Home />

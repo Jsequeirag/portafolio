@@ -24,7 +24,7 @@ export default function Home() {
     canvas();
 
     setTimeout(typeitMyName, 500);
-    setTimeout(typeitMyOcupation, 3200);
+    setTimeout(typeitMyOcupation, 3000);
   });
 
   return (
@@ -52,8 +52,12 @@ export default function Home() {
             <span id="typeit-ocupation"></span>
           </div>
           <div className="text-center cv-button">
-            <a href="https://drive.google.com/file/d/124uU2CiCbZr2LXCRig4ezI_F8m9QHLX9/view?usp=sharing" target="_blank" rel="noreferrer">
-            <button className="btn-hover mt-1">Download CV</button>
+            <a
+              href="https://drive.google.com/file/d/124uU2CiCbZr2LXCRig4ezI_F8m9QHLX9/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="btn-hover mt-1">Download CV</button>
             </a>
           </div>
         </motion.div>
