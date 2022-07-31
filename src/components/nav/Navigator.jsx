@@ -44,7 +44,7 @@ export default function Navigator() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Container>
-              <Nav className="justify-content-end">
+              <Nav className="justify-content-end" id="nav">
                 <Nav.Link className="navLink" href="#home">
                   Home
                 </Nav.Link>

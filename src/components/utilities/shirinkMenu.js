@@ -11,7 +11,7 @@ export function shrinkNav() {
       document.getElementById("Navigator").style = document.getElementById(
         "Navigator"
       ).style =
-        "background-color: transparent ; box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75)!important;";
+        "background-color: transparent !important; box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75)!important;backdrop-filter: blur(0px) !important;color:";
     } else {
       document.getElementById("Navigator").style =
         "box-shadow: 1px -5px 22px 0px rgba(0,0,0,0.75) !important; backdrop-filter: blur(2px) !important;";
