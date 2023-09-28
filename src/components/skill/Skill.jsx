@@ -13,11 +13,9 @@ export default function Skill() {
           >
             <h2 className="card-title">Backend</h2>
             <div className="">
-              <p>-NODEJS</p>
-              <p>-TYPESCRIPT</p>
-              <p>-EXPRESSJS</p>
-              <p>-NESTJS</p>
-              <p>-MONGO</p>
+              <p>-NODEJS/EXPRESSJS/NESTJS</p>
+              <p>-C#/ASP .NET</p>
+              <p>-MONGO(NO-SQL)</p>
               <p>-SQL</p>
             </div>
           </div>
@@ -27,21 +25,24 @@ export default function Skill() {
           >
             <h2 className="card-title">Frontend</h2>
             <div className="">
-              <p>-REACT</p>
-              <p>-HTML,CSS,Javascript</p>
+              <p>-REACT/REDUX</p>
+              <p>-CYPRESSJS</p>
+              <p>-HTML/CSS/SASS</p>
+              <p>-JAVASCRIPT</p>
             </div>
           </div>
-
-          <div
-            className="skills-card-container"
-            style={{ minWidth: "300px", width: "300px", height: "300px" }}
-          >
-            <h2 className="card-title">Services</h2>
-            <div className="">
-              <p>-HEROKU</p>
-              <p>-NETLIFY</p>
+          {/*
+            <div
+              className="skills-card-container"
+              style={{ minWidth: "300px", width: "300px", height: "300px" }}
+            >
+              <h2 className="card-title">Services</h2>
+              <div className="">
+                <p>-HEROKU</p>
+                <p>-NETLIFY</p>
+              </div>
             </div>
-          </div>
+          */}
         </div>
       </div>
     </Fragment>
