@@ -53,7 +53,7 @@ export default function Home() {
           </div>
           <div className="text-center cv-button">
             <a
-              href="https://drive.google.com/file/d/124uU2CiCbZr2LXCRig4ezI_F8m9QHLX9/view?usp=sharing"
+              href="https://drive.google.com/file/d/1idNROwhZvmNYH-ZGFhCl4TyxBiSJ5FzZ/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >
