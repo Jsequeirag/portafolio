@@ -57,7 +57,7 @@ export default function Contact() {
           )}
           <div class="whatsapp-contact-section">
             <p class="whatsapp-contact-text">
-              ¿Prefieres contactarme directamente por WhatsApp?
+              Prefer to contact me directly on WhatsApp?
             </p>
             <a
               href="https://wa.me/50685022903"
@@ -65,9 +65,11 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Chatear por WhatsApp
+              Chat on WhatsApp
             </a>{" "}
-            <p class="whatsapp-email-text">¿Deseas enviarme un correo?</p>
+            <p class="whatsapp-email-text">
+              Would you like to send me an email?
+            </p>
           </div>
           <form
             className="d-flex justify-content-center flex-column"
