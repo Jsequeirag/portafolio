@@ -51,7 +51,7 @@ const testProjects = [
   },
   {
     _id: "2",
-    category: "Mantenimiento",
+    category: "Maintenance",
     title:
       "Publicis Resources: Plataforma Integral de Gestión para Empleados de Publicis ",
     description:
@@ -67,7 +67,7 @@ const testProjects = [
   },
   {
     _id: "nexat",
-    category: "Mantenimiento",
+    category: "Maintenance",
     title: "Publicis Resources: Sistema para el envio de facturas Electronicas",
     description:
       "Sistema de facturación electrónica integrado con Go-Socket. Automatiza y asegura el envío de facturas fiscales.",
