@@ -20,9 +20,24 @@ const testProjects = [
     github: null,
   },
   {
+    _id: "chatbotAlienRealty",
+    category: "Desarrollos",
+    title: "Chatbot para AlienRealty",
+    description:
+      "Portal de RRHH: Gestión de solicitudes y vacaciones con aprobación de jefe. Agiliza procesos y mejora la organización.",
+    photos: [
+      "projects/mantenimientos/portal-personal/portal1.png",
+      "projects/mantenimientos/portal-personal/portal2.png",
+      "projects/mantenimientos/portal-personal/portal3.png",
+    ],
+    tags: ["Nodejs", ".NET", "MS-SQL"],
+    link: null,
+    github: null,
+  },
+  {
     _id: "uber-direct",
     category: "Desarrollos",
-    title: "Desarrolo del FE para Integración Uber-direct",
+    title: "Desarrollo del FE para Integración Uber-direct",
     description:
       "Encargado del desarrollo del FE para la integración de uber-direct con cadenas de supermercados(AMPM y Superxtra)",
     photos: [
