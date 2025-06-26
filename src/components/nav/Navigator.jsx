@@ -38,8 +38,7 @@ export default function Navigator() {
           expand="lg"
         >
           <Navbar.Brand href="#home" className="p-2">
-            <mark className=" text-white ">José</mark>
-            <span className="text-white">Sequeira</span>
+            <span className="myName">José Sequeira</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

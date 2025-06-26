@@ -1,77 +1,102 @@
-.skill {
-  font-size: 20px !important;
-  font-family: "Space Mono", monospace !important;
-  margin: 0 !important;
-  padding: 50px 0px 25px 0px !important;
-  min-height: auto;
-
-  /* -------------------------------------------------------------------------- */
-  /*                   background-image: url("./img/07.png");                   */
-  /* -------------------------------------------------------------------------- */
-  /* -------------------------------------------------------------------------- */
-  /*                        background-repeat: no-repeat;                       */
-  /* -------------------------------------------------------------------------- */
-  /* -------------------------------------------------------------------------- */
-  /*                          background-position: top;                         */
-  /* -------------------------------------------------------------------------- */
-  /* -------------------------------------------------------------------------- */
-  /*                        background-size: 900px 900px;                       */
-  /* -------------------------------------------------------------------------- */
-  /* -------------------------------------------------------------------------- */
-  /*                  background-attachment: fixed !important;                  */
-  /* -------------------------------------------------------------------------- */
-}
-.skill .title {
-  text-align: center;
-  color: white;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+.skills-landing {
+  position: relative;
+  min-height: 100vh; /* Usar min-height para que crezca si el contenido lo necesita */
+  padding: 80px 20px; /* Aumenté un poco el padding superior */
+  overflow: hidden;
+  color: #333; /* Cambié el color del texto general a uno más legible sobre el fondo */
+  z-index: 0;
+  display: flex; /* Para centrar el contenido verticalmente si lo deseas */
+  flex-direction: column;
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: center; /* Centrar verticalmente */
+  text-align: center; /* Centrar texto por defecto */
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  border-radius: 18px; /* Rounded corners for the entire section */
+  margin: 20px; /* Add some margin around the entire section */
 }
 
-/* ---------------------------------- card ---------------------------------- */
-.skill .card-title {
-  color: white;
-  text-align: center;
-}
-.skill p {
-  color: white;
-  margin: 0px !important;
-}
-.skills-container {
-}
-.skills-card-container {
-  margin: 50px 25px 0px 25px;
-}
-
-.title {
-  text-decoration: underline;
-  text-decoration-color: rgb(106, 0, 255);
-}
-.skills-card-container {
-  backdrop-filter: blur(10px);
-  border: 1px solid rgb(106, 0, 255);
-  border-radius: 10px;
-  background-color: transparent !important;
-  padding: 15px;
-  box-shadow: -11px 11px 0px 1px black;
-  -webkit-box-shadow: -11px 11px 0px 1px black;
-  -moz-box-shadow: -11px 11px 0px 1px black;
-}
-/*
-.background-cloud-card {
-  background-image: linear-gradient(
-    to right bottom,
-    transparent,
-    transparent,
-    transparent,
-    transparent,
-    transparent,
-    transparent,
-    transparent,
-    #ebe012
-  );
-  border-radius: 10px;
+.blur-bg {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  filter: blur(10px);
+  inset: 0;
+  background-image: url("pcMac.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: blur(0.5px);
+  /* Añadí un desenfoque para que el texto destaque más */
 }
-*/
+
+.intro-text {
+  margin-bottom: 60px; /* Aumenté el margen inferior */
+  color: #1e1e1e; /* Un color más oscuro para el título principal */
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px 30px;
+}
+
+.intro-text h2 {
+  font-size: 42px; /* Hice el título más grande */
+  margin-bottom: 20px;
+  font-weight: bold; /* Añadí negrita para jerarquía */
+}
+
+.intro-text p {
+  font-size: 18px;
+  color: black;
+  max-width: 800px; /* Limitar el ancho para mejor legibilidad en pantallas grandes */
+  margin: 0 auto 20px; /* Centrar el párrafo */
+}
+
+.skills-details {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Adaptativo a diferentes tamaños de pantalla */
+  gap: 30px; /* Aumenté el gap entre los recuadros */
+  max-width: 1200px; /* Ancho máximo para el contenedor de habilidades */
+  width: 100%;
+  padding: 0 20px; /* Añadí padding horizontal dentro del contenedor */
+}
+
+.skill {
+  padding: 30px; /* Aumenté el padding interno */
+  border-radius: 18px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Fondo blanco semitransparente para mejor contraste */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  text-align: left; /* Alinear el texto dentro de cada habilidad a la izquierda */
+}
+
+.skill h3 {
+  font-size: 28px; /* Hice el título de la habilidad más grande */
+  margin-bottom: 15px;
+  color: #1e1e1e; /* Color más oscuro para el título de la habilidad */
+}
+
+.skill p {
+  font-size: 16px;
+  color: black; /* Color de texto un poco más oscuro */
+  line-height: 1.6; /* Mejor legibilidad para párrafos */
+}
+
+/* Opcional: Para listar tecnologías específicas */
+.skill ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.skill ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}

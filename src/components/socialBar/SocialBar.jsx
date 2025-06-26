@@ -26,15 +26,21 @@ export default function SocialBar() {
       animate="animate"
       className="icon-bar "
     >
-      <a href="https://linkedin.com/in/josé-luis-sequeira-góngora-114baa216" target="_blank" rel="noreferrer" className="linkedin">
-        <i className="fa fa-linkedin"></i>
+      <a
+        href="https://linkedin.com/in/josé-luis-sequeira-góngora-114baa216"
+        target="_blank"
+        rel="noreferrer"
+        className="linkedin"
+      >
+        <i className="fa-brands fa-linkedin" style={{ fontSize: "2.3rem" }}></i>
       </a>
       <a
         href="https://github.com/Jsequeirag/"
-         target="_blank" rel="noreferrer"
+        target="_blank"
+        rel="noreferrer"
         className="github"
       >
-        <i className="fa fa-github"></i>
+        <i className="fa-brands fa-github" style={{ fontSize: "2.3rem" }}></i>
       </a>
       <a href="/" className="robot">
         <Ztext
@@ -46,6 +52,7 @@ export default function SocialBar() {
           fade={false}
           layers={14}
           perspective="500px"
+          style={{ fontSize: "2.3rem" }}
         >
           <span role="img" aria-label="emoji">
             🤖

@@ -55,7 +55,20 @@ export default function Contact() {
               <span>{errorMessage}</span>
             </div>
           )}
-
+          <div class="whatsapp-contact-section">
+            <p class="whatsapp-contact-text">
+              ¿Prefieres contactarme directamente por WhatsApp?
+            </p>
+            <a
+              href="https://wa.me/50685022903"
+              class="whatsapp-contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chatear por WhatsApp
+            </a>{" "}
+            <p class="whatsapp-email-text">¿Deseas enviarme un correo?</p>
+          </div>
           <form
             className="d-flex justify-content-center flex-column"
             onSubmit={submit}

@@ -1,83 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 .Navigator {
-  transition: box-shadow 1s, background-color 1s, backdrop-filter 1s;
-  color: white !important;
-  box-shadow: 1px -5px 22px 0px rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(20px) !important;
-  font-size: 20px !important;
-  font-family: "Space Mono", monospace !important;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    backdrop-filter 0.3s ease-in-out;
+  box-shadow: none; /* Removed the strong box-shadow */
+  backdrop-filter: blur(25px) !important; /* Slightly stronger blur */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ) !important; /* Lighter and more translucent background */
+  font-size: 18px !important; /* Slightly smaller font size for cleaner look */
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
 }
-.Navigator mark {
-  background-color: black;
+.myName {
+  font-weight: bolder;
 }
 .navLink {
-  color: white !important;
+  color: black !important; /* Dark text for better readability */
   display: inline-block;
   position: relative;
-  transition: none !important;
+  transition: opacity 0.2s ease-in-out !important; /* Smooth opacity transition */
   margin-left: 12px !important;
   margin-right: 12px !important;
   font-weight: 500;
 }
 .navLink:hover {
-  transform: scale(1.1);
+  opacity: 0.7; /* Subtle fade on hover */
+  transform: none; /* Remove scale on hover */
 }
 .navLink::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2px; /* Adjust position of the underline */
   width: 0;
-  height: 3px;
-  background-color: rgb(106, 0, 255);
-  transition: width 0.25s ease-out;
+  height: 2px; /* Thinner underline */
+  background-color: #007aff; /* iOS blue for the underline */
+  transition: width 0.2s ease-out;
 }
 .navLink:hover::before {
   width: 100%;
 }
 .contactLink {
-  color: white !important;
+  background: linear-gradient(
+    to bottom,
+    #ffffffcc,
+    #f0f0f0cc
+  ); /* fondo suave */
+  border: 1px solid #d1d1d1; /* borde claro */
+  border-radius: 20px; /* borde redondeado iOS */
+  padding: 10px 24px;
+  font-size: 16px;
+  color: black !important;
   font-weight: 500;
-  margin-left: 10px !important;
-  border: 1px rgb(106, 0, 255) solid;
-  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* sombra sutil */
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px); /* efecto glass ligero */
 }
 .contactLink:hover {
-  color: black !important;
-  background-color: rgb(106, 0, 255);
+  background: linear-gradient(to bottom, #fefefe, #e9e9e9);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
 @media screen and (max-width: 991px) {
   .navLink {
     text-align: center;
+    color: #1c1c1e !important; /* Dark text */
+    padding: 10px 0 !important; /* Add vertical padding for touch targets */
   }
   .navLink:hover {
-    transform: none;
-    color: black !important;
-    background-color: rgb(106, 0, 255) !important;
+    opacity: 1;
+    color: white !important;
+    background-color: #007aff !important;
   }
   .navLink:active {
-    background-color: rgb(106, 0, 255) !important;
+    background-color: #005bb5 !important; /* Darker blue on active */
   }
 
   .navLink::before {
-    transition: none;
-    position: relative;
+    display: none; /* Hide underline on mobile */
   }
   .contactLink {
-    border: none;
+    border: 1px solid #007aff;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    margin: 10px 0 !important; /* Add vertical margin */
+    padding: 10px 0 !important;
+    border-radius: 18px;
   }
   .contactLink:active {
-    background-color: rgb(106, 0, 255) !important;
+    background-color: #005bb5 !important;
+    color: white !important;
   }
   .Navigator {
-    box-shadow: 1px -5px 22px 0px rgba(0, 0, 0, 0.75) !important;
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1) !important; /* Softer shadow on mobile */
+    background-color: rgba(
+      200,
+      200,
+      200,
+      0.8
+    ) !important; /* More opaque on mobile */
   }
   .navbar-light .navbar-toggler {
-    color: transparent !important;
-    border-color: transparent !important;
+    color: rgba(0, 0, 0, 0.5) !important; /* Darker color for toggler icon */
+    border-color: rgba(0, 0, 0, 0.1) !important; /* Subtle border for toggler */
   }
 }

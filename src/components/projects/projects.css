@@ -1,68 +1,246 @@
-/* -------------------------------------------------------------------------- */
-/*                                    main                                    */
-/* -------------------------------------------------------------------------- */
-.projects {
-  font-size: 20px !important;
-  font-family: "Space Mono", monospace !important;
-  margin: 0 !important;
-  /*background-image: linear-gradient(
-    to left bottom,
-    #4c177a,
-    #362071,
-    #222365,
-    #132357,
-    #0c2147
-  );*/
-  height: auto;
+/* Contenedor principal de la sección de proyectos */
+.projects-section {
+  position: relative; /* Necesario para posicionar el video y el contenido superpuesto */
+  padding: 60px 20px;
+  min-height: 100vh; /* Para que ocupe al menos toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Para que el video no cause scrollbars si es un poco más grande */
+  color: #fff; /* Color de texto por defecto para la sección */
+  background-image: url("processor.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 18px; /* Rounded corners for the entire section */
+  margin: 20px; /* Add some margin around the entire section */
+}
 
-  padding: 25px !important;
-}
-/* -------------------------------------------------------------------------- */
-/*                                    title                                   */
-/* -------------------------------------------------------------------------- */
-.projects .title {
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: rgb(106, 0, 255);
-  text-align: center;
-}
-/* -------------------------------------------------------------------------- */
-/*                                    card                                    */
-/* -------------------------------------------------------------------------- */
-.projects-container {
-  padding: 30px 0 30px 0;
-}
-.card {
-  height: 475px;
+/* Estilo para el video de fondo */
+#background-video {
+  position: absolute; /* Cambiado de fixed a absolute relativo a .projects-section */
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 400;
-  min-width: 300;
-  box-shadow: -3px 3px 3px 0px;
-  transition: box-shadow 0.3s top;
-  margin: 25px 25px 25px 25px;
-  background-color: rgb(223, 223, 223) !important;
+  height: 100%;
+  object-fit: cover; /* Cubre todo el contenedor sin deformarse */
+  z-index: -2; /* Detrás de todo */
 }
-.card-img {
-  height: 300px;
-}
-.projects .card-title {
+
+/* Contenedor para el contenido que va sobre el video */
+.projects-overlay-content {
+  position: relative;
+  z-index: 1; /* Encima del video */
+  width: 100%;
+  max-width: 1200px; /* Ajusta según tu diseño */
   text-align: center;
 }
-.btn-moving {
-  font-weight: 500;
-  border-radius: 14px;
-  border: 2px solid;
-  background-color: transparent;
-  transition: font-weight 0.1s, transform 0.1s, background-color 0.5s;
-  padding: 5px 10px;
-  margin-left: 5px !important;
-  margin-right: 5px !important;
+
+.projects-overlay-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: black;
 }
-.btn-moving:hover {
-  font-weight: 900;
-  border-radius: 14px;
-  border: 2px solid;
-  transform: scale(1.05);
-  transition: font-weight 0.1s, transform 0.1s, background-color 0.5s;
-  background-color: rgb(0, 255, 191);
+
+/* Filtros de categoría */
+.category-filters {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.category-filters button {
+  background-color: rgba(184, 184, 184, 0.15);
+  color: black;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+}
+
+.category-filters button:hover {
+  background-color: rgba(180, 179, 179, 0.3);
+  transform: translateY(-2px);
+}
+
+.category-filters button.active {
+  background-color: #007bff; /* Un color distintivo para el filtro activo */
+  /* background-color: rgba(var(--primary-color-rgb), 0.8);  Si usas variables CSS */
+  color: black;
+  border-color: transparent;
+}
+
+/* Grid para las tarjetas de proyecto */
+.project-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  ); /* Responsive grid */
+  gap: 30px;
+  width: 100%;
+}
+
+/* Estilos para cada tarjeta de proyecto (Glassmorphism) */
+.project-card {
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  color: black; /* Color de texto principal dentro de la tarjeta */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__image-container {
+  width: 100%;
+  /* height: 200px;  O usa aspect-ratio */
+  aspect-ratio: 16 / 10; /* Mantiene la proporción de la imagen */
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden; /* Para que la imagen no se salga si es más grande */
+  position: relative; /* Para los botones de navegación de imagen */
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre el contenedor sin deformarse */
+  display: block;
+}
+
+.project-card__image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+.project-card__image-placeholder .fas {
+  font-size: 48px;
+}
+
+/* Botones de navegación de imagen */
+.project-card__image-container .prev-image,
+.project-card__image-container .next-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 11px 17px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.2s ease;
+}
+.project-card__image-container .prev-image:hover,
+.project-card__image-container .next-image:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.project-card__image-container .prev-image {
+  left: 5px;
+}
+.project-card__image-container .next-image {
+  right: 5px;
+}
+
+.project-card__image-container .image-indicator {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+.project-card__title {
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.project-card__description {
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Hace que la descripción ocupe el espacio disponible */
+  color: black;
+}
+
+.project-card__tags {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.project-card__tags .tag {
+  display: inline-block;
+  background-color: rgba(117, 117, 117, 0.1);
+  color: black;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.75em;
+}
+
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap; /* Para que los botones se ajusten si no caben */
+  gap: 10px; /* Espacio entre botones */
+  margin-top: auto; /* Empuja los botones al final de la tarjeta si la descripción es corta */
+}
+
+.project-card__actions .action-button {
+  background-color: rgba(117, 117, 117, 0.1);
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.85em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+}
+.project-card__actions .action-button:hover {
+  background-color: rgba(117, 117, 117, 0.1);
+  transform: scale(1.03);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-card__actions .action-button i {
+  font-size: 0.9em;
+}
+.glassmorphism-project-static {
+  background: rgba(255, 255, 255, 0.15); /* Un poco más claro */
+  backdrop-filter: blur(12px); /* Desenfoque más suave */
+  -webkit-backdrop-filter: blur(12px); /* Soporte Safari */
+  border-radius: 20px; /* Redondeo iOS más notorio */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* Borde ligeramente más visible */
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra más suave y extendida */
+  transition: all 0.3s ease-in-out;
 }

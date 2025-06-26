@@ -36,7 +36,20 @@ export function typeitMyName() {
 }
 export function typeitMyOcupation() {
   new TypeIt("#typeit-ocupation", {
-    strings: ["Web developer"],
+    strings: ["Desarrollador Full Stack"],
+    speed: 60,
+    waitUntilVisible: true,
+    afterComplete: function (instance) {
+      instance.destroy();
+    },
+  }).go();
+}
+
+export function typeitMyOcupationSt() {
+  new TypeIt("#typeit-ocupation-st", {
+    strings: [
+      "Especializado en <i class='fab fa-react' style='color: #61DBFB;'></i> React, <i class='fab fa-node-js' style='color: #68A063;'></i> Node.js y <i class='fas fa-code' style='color: #512BD4;'></i> .NET",
+    ],
     speed: 60,
     waitUntilVisible: true,
     afterComplete: function (instance) {

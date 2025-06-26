@@ -8,4 +8,6 @@
   color: white;
   background-color: black;
   padding: 18px;
+  border-radius: 18px; /* Rounded corners for the entire section */
+  margin: 5px 20px; /* Add some margin around the entire section */
 }

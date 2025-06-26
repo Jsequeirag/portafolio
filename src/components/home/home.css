@@ -1,35 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 .home {
   height: 100vh;
   margin: 0 !important;
   padding: 0 !important;
-  background-image: linear-gradient(
-    to right top,
-    #042d6b,
-    #02285c,
-    #02224e,
-    #041d40,
-    #051732,
-    #0a1631,
-    #0e162f,
-    #11152e,
-    #1d1937,
-    #2a1b3e,
-    #391e44,
-    #481f49
-  );
+
   border-bottom: 1px solid black;
   font-size: 20px !important;
-  font-family: "Space Mono", monospace !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
 }
 .btn-hover {
   backdrop-filter: blur(2px) !important;
   color: white;
   background-color: transparent;
-  border: 1px solid rgb(106, 0, 255);
+  border: 2px solid rgb(106, 0, 255);
   font-weight: 500;
   padding: 10px 15px;
   border-radius: 15px;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(138, 43, 226, 0.6);
 }
 .btn-hover:hover {
   transform: scale(1.1);
@@ -37,6 +36,7 @@
   color: black;
   transition: transform 0.3s, background-color 0.3s;
   font-weight: 500;
+  box-shadow: 0px 0px 15px rgba(138, 43, 226, 0.9);
 }
 .image-container {
   display: flex;
@@ -65,21 +65,40 @@
   margin-bottom: 15px;
   text-align: center;
 }
+.myname span,
+.myocupation span {
+  color: #ffffff; /* Blanco puro */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Sombra negra suave */
+  font-weight: bold;
+}
 .myocupation {
   margin-bottom: 25px;
   text-align: center;
 }
 
+.myocupationst span {
+  color: #ffffff; /* Blanco puro */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Sombra negra suave */
+  font-weight: bold;
+}
+.myocupationst {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
 #typeit-name {
-  font-size: 50px !important;
+  font-size: 53px !important;
 }
 #typeit-ocupation {
+  font-size: 38px !important;
+  font-weight: bold;
+}
+
+#typeit-ocupation-st {
   font-size: 30px !important;
   font-weight: bold;
-  font-style: italic;
-  text-decoration: 2px underline;
-  text-decoration-color: rgb(0, 228, 171);
 }
+
 @media screen and (max-width: 991px) {
   .image-container {
     justify-content: center;
@@ -101,5 +120,165 @@
   }
   canvas {
     height: auto !important;
+  }
+}
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.15); /* Un poco más claro */
+  backdrop-filter: blur(12px); /* Desenfoque más suave */
+  -webkit-backdrop-filter: blur(12px); /* Soporte Safari */
+  border-radius: 20px; /* Redondeo iOS más notorio */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* Borde ligeramente más visible */
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra más suave y extendida */
+  transition: all 0.3s ease-in-out;
+}
+.glassmorphism:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.cv-button {
+  display: flex;
+  justify-content: center;
+}
+.cv-button a button {
+  background: linear-gradient(
+    to bottom,
+    #ffffffcc,
+    #f0f0f0cc
+  ); /* fondo suave */
+  border: 1px solid #d1d1d1; /* borde claro */
+  border-radius: 20px; /* borde redondeado iOS */
+  padding: 10px 24px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* sombra sutil */
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px); /* efecto glass ligero */
+}
+
+.cv-button a button:hover {
+  background: linear-gradient(to bottom, #fefefe, #e9e9e9);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+.cv-button a button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Asegúrate de que el contenedor tenga un fondo transparente */
+.info-container {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Fondo con algo de transparencia */
+}
+
+.shape {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  filter: blur(2px);
+  animation-name: floatSphere, rotateShape;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.shape-circle {
+  border-radius: 50%;
+}
+
+.shape-square {
+  border-radius: 4px;
+}
+
+.shape-triangle {
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid rgba(255, 255, 255, 0.4);
+  animation: floatSphere 30s ease-in-out infinite;
+}
+
+.shape-diamond {
+  transform: rotate(45deg);
+  border-radius: 0;
+}
+
+@keyframes floatSphere {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    transform: translate(var(--x), var(--y));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y));
+  }
+}
+@keyframes rotateShape {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #25d366; /* Color verde de WhatsApp */
+  color: white;
+  border-radius: 50%; /* Para hacerlo circular */
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  font-size: 24px; /* Tamaño del icono */
+  /* Si estás usando una librería de iconos como Font Awesome, podrías tener algo como: */
+  /* font-family: 'Font Awesome 5 Brands'; */
+  /* content: '\f232'; */
+}
+
+/* Ajustes para pantallas más pequeñas si es necesario */
+@media (max-width: 600px) {
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+  .whatsapp-icon {
+    font-size: 20px;
   }
 }

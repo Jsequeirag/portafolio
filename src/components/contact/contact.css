@@ -2,34 +2,31 @@
 .contact {
   height: auto;
   padding: 50px;
-  font-family: "VT323", monospace !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 
-  background-attachment: fixed !important;
+  /* Subtle background gradient for iOS feel */
+  background-image: linear-gradient(
+    to bottom right,
+    #f0f2f5,
+    /* Very light gray-blue */ #e0e4eb /* Slightly darker light gray-blue */
+  );
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(
-    to left bottom,
-    #44a1ff,
-    #5297fe,
-    #628cfb,
-    #7480f6,
-    #8572ee,
-    #777bf5,
-    #6883fa,
-    #578bff,
-    #00a5ff,
-    #00bcff,
-    #00d1ff,
-    #12e3ff
-  );
+  border-radius: 18px; /* Rounded corners for the entire section */
+  margin: 5px 20px;
 }
 .contact .title {
-  text-decoration: underline;
-  text-decoration-color: rgb(106, 0, 255);
-  font-size: 60px !important;
-  color: white;
+  text-decoration: none; /* Remove underline for cleaner iOS look */
+  font-size: 48px; /* Adjusted font size for Inter */
+  font-weight: 700; /* Bold */
+  color: #1c1c1e; /* Dark text */
   text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
 }
 .form-container {
   padding: 20px !important;
@@ -70,31 +67,137 @@ textarea {
 }
 
 form button {
-  padding: 5px 15px;
-  margin-top: 20px;
-  font-weight: bold;
-  border: 2px black solid;
-  background-color: transparent;
-  transition: font-weight 0.1s, transform 0.1s, background-color 0.1s;
+  padding: 12px 25px; /* Adjusted padding */
+  margin-top: 25px; /* Adjusted spacing */
+  font-weight: 600; /* Semi-bold */
+  border: none; /* No border for iOS button */
+  background-color: #007aff; /* iOS blue */
+  color: white; /* White text */
+  border-radius: 12px; /* Rounded corners */
+  font-size: 18px !important; /* Adjusted font size for Inter */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-out;
+  box-shadow: 0 2px 6px rgba(0, 122, 255, 0.3); /* Subtle shadow for button */
 }
+
 form button:hover {
-  transform: scale(1.05);
-  transition: transform 0.1s, background-color 0.1s;
-  background-color: rgb(106, 0, 255);
+  transform: translateY(-1px); /* Slight lift on hover */
+  background-color: #005bb5; /* Darker blue on hover */
+  box-shadow: 0 4px 10px rgba(0, 122, 255, 0.4); /* Enhanced shadow on hover */
 }
 .sendingEmailState {
   margin-top: 20px;
-  padding: 5px 15px;
-  background-color: rgb(189, 255, 189);
-  border: 2px transparent solid;
-  border-radius: 15px;
+  padding: 10px 20px;
+  background-color: rgba(68, 204, 102, 0.1); /* Light green tint */
+  border: 1px solid rgba(68, 204, 102, 0.3); /* Green border */
+  border-radius: 12px; /* Rounded corners */
+  font-size: 16px !important; /* Adjusted font size */
+  color: #28a745; /* Darker green text */
+  font-weight: 500;
 }
 .errorSendingEmail {
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 5px 15px;
-  background-color: rgb(255, 189, 189);
-  border: 2px transparent solid;
-  border-radius: 15px;
-  color: red;
+  padding: 10px 20px;
+  background-color: rgba(255, 59, 48, 0.1); /* Light red tint */
+  border: 1px solid rgba(255, 59, 48, 0.3); /* Red border */
+  border-radius: 12px; /* Rounded corners */
+  color: #dc3545; /* Darker red text */
+  font-size: 16px !important; /* Adjusted font size */
+  font-weight: 500;
+}
+.form-container {
+  padding: 30px; /* Increased padding */
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  /* iOS Glassmorphism effect */
+  background-color: rgba(255, 255, 255, 0.7); /* More opaque white */
+  backdrop-filter: blur(20px); /* Stronger blur */
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px; /* More rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Subtle white border */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+  font-size: 18px; /* Standard font size for Inter */
+  font-weight: 500; /* Medium weight */
+  color: #1c1c1e; /* Dark text */
+
+  width: 100%;
+  max-width: 500px; /* Slightly smaller max-width for a more compact form */
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-container input,
+textarea {
+  font-size: 17px !important; /* Adjusted font size for Inter */
+  padding: 12px 15px; /* More padding */
+  border: 1px solid #d1d1d6; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 15px; /* Adjusted spacing */
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f8f8f8; /* Very light background for inputs */
+  color: #1c1c1e; /* Dark text */
+}
+@media (max-width: 768px) {
+  .contact .title {
+    font-size: 38px !important;
+  }
+  .form-container {
+    padding: 20px !important;
+    font-size: 16px;
+  }
+  .form-container input,
+  textarea,
+  .form-container label,
+  .form-container .form-text,
+  form button,
+  .sendingEmailState,
+  .errorSendingEmail {
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 576px) {
+  .contact {
+    padding: 20px 15px;
+  }
+  .contact .title {
+    font-size: 32px !important;
+  }
+  .form-container {
+    padding: 15px !important;
+  }
+}
+.whatsapp-contact-section {
+  text-align: center;
+  margin-bottom: 30px; /* Espacio entre esta sección y el formulario */
+}
+
+.whatsapp-contact-text {
+  font-size: 1.2em;
+  color: #333; /* Un gris oscuro */
+  margin-bottom: 10px;
+}
+.whatsapp-email-text {
+  font-size: 1.2em;
+  color: #333; /* Un gris oscuro */
+  margin-top: 10px;
+}
+
+.whatsapp-contact-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #25d366; /* Color de WhatsApp */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-contact-link:hover {
+  background-color: #128c7e; /* Un verde ligeramente más oscuro al hacer hover */
 }
