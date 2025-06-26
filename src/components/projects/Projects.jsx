@@ -24,11 +24,12 @@ const testProjects = [
     category: "Desarrollos",
     title: "Chatbot para AlienRealty",
     description:
-      "Portal de RRHH: Gestión de solicitudes y vacaciones con aprobación de jefe. Agiliza procesos y mejora la organización.",
+      "Chatbot integrado con GeminiIA para la plataforma AlienRealty para la busqueda inteligente de propiedades",
     photos: [
-      "projects/mantenimientos/portal-personal/portal1.png",
-      "projects/mantenimientos/portal-personal/portal2.png",
-      "projects/mantenimientos/portal-personal/portal3.png",
+      "projects/mantenimientos/chatbotAlien/chatbotAlien1.png",
+      "projects/mantenimientos/chatbotAlien/chatbotAlien2.png",
+      "projects/mantenimientos/chatbotAlien/chatbotAlien3.png",
+      "projects/mantenimientos/chatbotAlien/chatbotAlien4.png",
     ],
     tags: ["Nodejs", ".NET", "MS-SQL"],
     link: null,
