@@ -7,7 +7,7 @@ const testProjects = [
   {
     _id: "Portal",
     category: "Desarrollos",
-    title: "Publicis: Portal de Personal",
+    title: "Publicis Resources: Portal de Personal",
     description:
       "Portal de RRHH: Gestión de solicitudes y vacaciones con aprobación de jefe. Agiliza procesos y mejora la organización.",
     photos: [
@@ -31,7 +31,7 @@ const testProjects = [
       "projects/mantenimientos/chatbotAlien/chatbotAlien3.png",
       "projects/mantenimientos/chatbotAlien/chatbotAlien4.png",
     ],
-    tags: ["Nodejs", ".NET", "MS-SQL"],
+    tags: ["Nodejs", "React", "Gemini AI"],
     link: null,
     github: null,
   },
