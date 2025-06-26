@@ -7,7 +7,7 @@ const testProjects = [
   {
     _id: "Portal",
     category: "Desarrollos",
-    title: "Portal de Personal",
+    title: "Publicis: Portal de Personal",
     description:
       "Portal de RRHH: Gestión de solicitudes y vacaciones con aprobación de jefe. Agiliza procesos y mejora la organización.",
     photos: [
@@ -53,7 +53,7 @@ const testProjects = [
     _id: "2",
     category: "Mantenimiento",
     title:
-      "Plataforma Integral de Gestión para Empleados de Publicis Resources",
+      "Publicis Resources: Plataforma Integral de Gestión para Empleados de Publicis ",
     description:
       "Plataforma de Publicis Resources que gestiona horas extras, beneficios y declaraciones de empleados. Optimiza la administración de personal.",
     photos: [
@@ -68,7 +68,7 @@ const testProjects = [
   {
     _id: "nexat",
     category: "Mantenimiento",
-    title: "Sistema para el envio de facturas Electronicas",
+    title: "Publicis Resources: Sistema para el envio de facturas Electronicas",
     description:
       "Sistema de facturación electrónica integrado con Go-Socket. Automatiza y asegura el envío de facturas fiscales.",
     photos: [
