@@ -82,7 +82,7 @@ export default function Home() {
           </div>
           <div className="cv-button">
             <a
-              href="https://drive.google.com/file/d/1er0Aw9HfrNi436Kb5PLMhKchRQ8es7PZ/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Ldu4r32j2kR_qMWYiqaY5coAQWLseCV7/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >
