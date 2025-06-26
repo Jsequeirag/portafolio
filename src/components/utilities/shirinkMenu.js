@@ -48,7 +48,7 @@ export function typeitMyOcupation() {
 export function typeitMyOcupationSt() {
   new TypeIt("#typeit-ocupation-st", {
     strings: [
-      "Especializado en <i class='fab fa-react' style='color: #61DBFB;'></i> React, <i class='fab fa-node-js' style='color: #68A063;'></i> Node.js y <i class='fas fa-code' style='color: #512BD4;'></i> .NET",
+      "Specialized in <i class='fab fa-react' style='color: #61DBFB;'></i> React, <i class='fab fa-node-js' style='color: #68A063;'></i> Node.js y <i class='fas fa-code' style='color: #512BD4;'></i> .NET",
     ],
     speed: 60,
     waitUntilVisible: true,

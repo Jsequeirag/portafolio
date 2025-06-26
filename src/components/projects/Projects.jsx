@@ -6,7 +6,7 @@ import "./projects.css"; // Asegúrate de que este archivo CSS contenga los esti
 const testProjects = [
   {
     _id: "Portal",
-    category: "Desarrollos",
+    category: "Development",
     title: "Publicis Resources: Portal de Personal",
     description:
       "Portal de RRHH: Gestión de solicitudes y vacaciones con aprobación de jefe. Agiliza procesos y mejora la organización.",
@@ -21,7 +21,7 @@ const testProjects = [
   },
   {
     _id: "chatbotAlienRealty",
-    category: "Desarrollos",
+    category: "Development",
     title: "Chatbot para AlienRealty",
     description:
       "Chatbot integrado con GeminiIA para la plataforma AlienRealty para la busqueda inteligente de propiedades",
@@ -37,7 +37,7 @@ const testProjects = [
   },
   {
     _id: "uber-direct",
-    category: "Desarrollos",
+    category: "Development",
     title: "Desarrollo del FE para Integración Uber-direct",
     description:
       "Encargado del desarrollo del FE para la integración de uber-direct con cadenas de supermercados(AMPM y Superxtra)",
@@ -99,7 +99,7 @@ const testProjects = [
 export default function Projects() {
   const [allProjects] = useState(testProjects); // Renombrado para claridad
   const [filteredProjects, setFilteredProjects] = useState(testProjects);
-  const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentImageIndex, setCurrentImageIndex] = useState({});
 
   // Inicializar currentImageIndex para cada proyecto
@@ -113,7 +113,7 @@ export default function Projects() {
 
   const filterProjectsByCategory = (category) => {
     setSelectedCategory(category);
-    if (category === "Todos") {
+    if (category === "All") {
       setFilteredProjects(allProjects);
     } else {
       setFilteredProjects(
@@ -128,7 +128,7 @@ export default function Projects() {
     setCurrentImageIndex(initialIndexes);
   };
 
-  const categories = ["Todos", ...new Set(allProjects.map((p) => p.category))]; // Dinámico
+  const categories = ["All", ...new Set(allProjects.map((p) => p.category))]; // Dinámico
 
   const handleNextImage = (projectId) => {
     const project = allProjects.find((p) => p._id === projectId);
@@ -162,7 +162,7 @@ export default function Projects() {
       </video>*/}
 
       <div className="projects-overlay-content">
-        <h2>Mis Proyectos</h2>
+        <h2>My projects</h2>
         <div className="category-filters  glassmorphism-project-static ">
           {categories.map((category) => (
             <button
@@ -170,17 +170,17 @@ export default function Projects() {
               onClick={() => filterProjectsByCategory(category)}
               className={selectedCategory === category ? "active" : ""}
             >
-              {category === "Todos" ? (
+              {category === "All" ? (
                 <>
                   <i class="fa-solid fa-grip-vertical mx-1"></i>
                   {category}
                 </>
-              ) : category === "Desarrollos" ? (
+              ) : category === "Development" ? (
                 <>
                   <i class="fa-solid fa-code mx-1"></i>
                   {category}
                 </>
-              ) : category === "Mantenimiento" ? (
+              ) : category === "Maintenance" ? (
                 <>
                   <i class="fa-solid fa-gear mx-1"></i>
                   {category}
